@@ -1,0 +1,49 @@
+---
+import PricingCard from "./PricingCard.astro";
+
+const plans = [
+    {
+        title: "Básico",
+        suscripcion: "80",
+        price: "25",
+        time: "mes",
+        description: "Ideal para pequeños negocios empezando su digitalización.",
+        features: ["Máximo 100 items en inventario", "1 Usuario administrador", "1 Usuario empleado"],
+    },
+    {
+        title: "Intermedio",
+        suscripcion: "50",
+        price: "130",
+        time: "semestre",
+        description: "Negocios establecidos que busquen una opción digital a medio plazo.",
+        features: ["Items ilimitados", "1 Usuario administrador", "Personalización limitada", "Soporte Prioritario"]
+    },
+    {
+        title: "Pro",
+        suscripcion: "30",
+        price: "220",
+        time: "año",
+        description: "Soluciones personalizadas por largo tiempo.",
+        features: ["Items ilimitados", "Usuarios ilimitados", "Personalización total", "Soporte Prioritario", "Obsequio de dominio .com"]
+    }
+];
+---
+
+<section class="snap-start scroll-mt-10 bg-white/2 px-6 py-12 min-h-screen flex flex-col justify-center" id="planes">
+    <div class="mx-auto max-w-7xl w-full">
+        <div class="mb-10 flex flex-col gap-2 text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                Planes diseñados para crecer
+            </h2>
+            <p class="mx-auto max-w-2xl text-base text-text-muted">
+                Desde emprendedores hasta grandes corporaciones.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 items-stretch">
+            {plans.map((plan) => (
+                <PricingCard {...plan} />
+            ))}
+        </div>
+    </div>
+</section>

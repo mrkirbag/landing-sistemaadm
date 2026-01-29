@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #0F0529;
+    --color-secondary: #1F0A52;
+    --color-accent: #9485ED;
+    --color-custom-gray: #DADADA;
+    --font-display: "Roboto", sans-serif;
+    --radius-default: 0.25rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+}
+
+@layer components {
+    .nav-link {
+        @apply relative py-1 text-base font-medium transition-colors duration-300 
+            hover:text-accent md:text-sm
+            before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 
+            before:bg-accent before:transition-all before:duration-300 hover:before:w-full;
+    }
+}
+
+@layer utilities {
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+            clip-path: inset(0 0 100% 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    .animate-menu-open {
+        animation: slideDown 0.4s ease-out forwards;
+        display: flex !important; 
+    }
+}
