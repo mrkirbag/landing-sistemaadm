@@ -20,6 +20,10 @@ export default defineConfig({
 
   output: 'server',
 
-  adapter: netlify()
+  adapter: netlify(),
+
+  site: {
+    url: 'https://savi.fadikirbag.dev',
+  },
 
 });
