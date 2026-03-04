@@ -2,8 +2,9 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import netlify from '@astrojs/netlify';
 
-
 export default defineConfig({
+
+  site: 'https://savi.fadikirbag.dev',
 
   vite: {
     plugins: [tailwindcss()],
@@ -19,11 +20,5 @@ export default defineConfig({
   },
 
   output: 'server',
-
   adapter: netlify(),
-
-  site: {
-    url: 'https://savi.fadikirbag.dev',
-  },
-
 });
