@@ -3,8 +3,9 @@
 @theme {
     --color-primary: #0F0529;
     --color-secondary: #1F0A52;
-    --color-accent: #9485ED;
-    --color-custom-gray: #DADADA;
+    --color-accent: #A855F7;
+    --color-custom-gray: #F1F5F9;
+    --color-tertiary: #6366F1;
     --font-display: "Roboto", sans-serif;
     --radius-default: 0.25rem;
     --radius-lg: 0.5rem;

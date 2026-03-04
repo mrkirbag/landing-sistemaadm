@@ -8,15 +8,15 @@ interface Props {
 const { title, description, class: className } = Astro.props;
 ---
 
-<div class={`group relative overflow-hidden rounded-3xl border border-white/10 bg-linear-to-b from-white/5 to-transparent p-px transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl hover:shadow-primary/20 ${className}`}>
-    <div class="relative h-full w-full rounded-[23px] bg-card-dark/90 p-8 backdrop-blur-sm">
+<div class={`group relative overflow-hidden rounded-3xl border border-white/20 bg-linear-to-br from-white/10 via-white/5 to-transparent p-px transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-accent/30 ${className}`}>
+    <div class="relative h-full w-full rounded-[23px] bg-linear-to-br from-card-dark/95 to-card-dark/80 p-8 backdrop-blur-md">
         
-        <div class="pointer-events-none absolute -left-1 -top-1 h-32 w-32 bg-primary/10 blur-3xl transition-opacity duration-500 opacity-0 group-hover:opacity-100"></div>
+        <div class="pointer-events-none absolute -left-1 -top-1 h-40 w-40 bg-accent/20 blur-3xl transition-opacity duration-500 opacity-0 group-hover:opacity-100"></div>
 
-        <div class="flex h-full flex-col justify-center md:justify-evenly items-center gap-6">
+        <div class="flex h-full flex-col justify-between items-center gap-6">
             
             <div class="relative z-10">
-                <h3 class="mb-2 text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-primary-light">
+                <h3 class="mb-2 text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-accent group-hover:text-glow">
                     {title}
                 </h3>
                 <p class="text-sm leading-relaxed text-text-muted/80 md:text-base">
